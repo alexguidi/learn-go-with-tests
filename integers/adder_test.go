@@ -14,6 +14,7 @@ func TestAdder(t *testing.T) {
 	}
 }
 
+//to run it: go test -v
 func ExampleAdd() {
 	sum := Add(1, 5)
 	fmt.Println(sum)
