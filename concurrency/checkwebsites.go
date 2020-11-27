@@ -18,12 +18,14 @@ different processes, allowing us to avoid a race condition bug.
 
 package concurrency
 
+//WebsiteChecker is a type
 type WebsiteChecker func(string) bool
 type result struct {
 	string
 	bool
 }
 
+//CheckWebsites check if the sites are up
 func CheckWebsites(wc WebsiteChecker, urls []string) map[string]bool {
 	results := make(map[string]bool)
 	resultChannel := make(chan result)
